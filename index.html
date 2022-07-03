@@ -3,7 +3,24 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8">
-  <title>Lennart M&uuml;hlenmeier</title>
+  <title>Lennart M&uuml;hlenmeier &mdash; Journalist</title>
+
+  <meta name="title" content="Lennart Mühlenmeier – Journalist">
+  <meta name="description" content="Ich bin Journalist aus Berlin. Meine Themen lauten Überwachung, Repressiond und Hacking.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lnrt.de/">
+  <meta property="og:title" content="Lennart Mühlenmeier – Journalist">
+  <meta property="og:description" content="Ich bin Journalist aus Berlin. Meine Themen lauten Überwachung, Repressiond und Hacking.">
+  <meta property="og:image" content="/pictures/meta.png">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://lnrt.de/">
+  <meta property="twitter:title" content="Lennart Mühlenmeier – Journalist">
+  <meta property="twitter:description" content="Ich bin Journalist aus Berlin. Meine Themen lauten Überwachung, Repressiond und Hacking.">
+  <meta property="twitter:image" content="/pictures/meta.png">
+
+
   <style>
   /* http://meyerweb.com/eric/tools/css/reset/ 
      v2.0 | 20110126
@@ -57,44 +74,95 @@
   /*****/
 
   body {
-    font-family: monospace;
-    padding: 2.3em 4.2em;
-    font-size: 15px;
+    font-family: 'Roboto', monospace;
+    font-size: 1.6em;
     line-height: 2;
+    color: white;
+    background: black;
   }
 
-  h1, h2, p, code {
+  p, code {
     margin-bottom: 1em;
   }
 
-  h1 {
+  header, section {
+    padding: 3% 5%;
+  }
+
+  header {
     display: none;
   }
 
   code {
-    color: gray;
     letter-spacing: 2px;
   	white-space: code-wrap;
     display: inline;
+    color: gray;
   }
 
   a {
-    color: blue;
+    color: lightgreen;
     text-decoration: none;
   }
 
   strong {
-    font-weight: bolder;
+    font-weight: 900;
   }
+
+  /*****/
+
+  /* roboto-regular - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+  /* roboto-italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url('fonts/roboto-v30-latin-italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/roboto-v30-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/roboto-v30-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/roboto-v30-latin-italic.woff') format('woff'), /* Modern Browsers */
+         url('fonts/roboto-v30-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/roboto-v30-latin-italic.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+  /* roboto-900 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/roboto-v30-latin-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/roboto-v30-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/roboto-v30-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/roboto-v30-latin-900.woff') format('woff'), /* Modern Browsers */
+         url('fonts/roboto-v30-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/roboto-v30-latin-900.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Lennart M&uuml;hlenmeier</h1>
+    <h1>Lennart M&uuml;hlenmeier &mdash; Journalist</h1>
   </header>
 
   <section>
-    <p>Hallo, ich bin Lennart M&uuml;hlenmeier, <strong>Journalist aus Berlin</strong>.
+    <p>Hi, ich bin Lennart M&uuml;hlenmeier, <strong>Journalist aus Berlin</strong>.
     <br />Meine Kernthemen lauten Überwachung, Repression und Hacking.
     <br />Derzeit bin ich als Volontär bei Golem.de angestellt.</p>
     <p>Du kannst mir <strong>gerne eine Mail schreiben</strong> an <a href="mailto:lennart@lnrt.de">lennart@lnrt.de</a>.
