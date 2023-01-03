@@ -75,35 +75,35 @@
 
   body {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.6em;
-    line-height: 2;
+    font-size: clamp(1.2em, 2vw, 1.6em);
+    line-height: 1.6;
+    padding: 5%;
   }
 
-  p, code {
-    margin-bottom: 1em;
-  }
-
-  header, section {
-    padding: 3% 5%;
+  p {
+    margin-bottom: 1.25em;
   }
 
   header {
-    display: none;
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
   }
 
   code {
-    letter-spacing: 2px;
-  	white-space: code-wrap;
-    display: inline;
-    color: gray;
-  }
-
-  a {
-    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
   }
 
   strong {
     font-weight: 900;
+  }
+
+  ins {
+    text-decoration: none;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -118,6 +118,9 @@
       color: white;
       animation: glitch 3s steps(100) infinite;
     }
+    code {
+      color: #666;
+    }
   }
 
   @media (prefers-color-scheme: light) {
@@ -127,6 +130,9 @@
     }
     a {
       color: blue;
+    }
+    code {
+      color: #888;
     }
   }
 
