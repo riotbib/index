@@ -74,36 +74,36 @@
   /*****/
 
   body {
-    font-family: 'Roboto', monospace;
-    font-size: 1.6em;
-    line-height: 2;
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(1.2em, 2vw, 1.6em);
+    line-height: 1.6;
+    padding: 5%;
   }
 
-  p, code {
-    margin-bottom: 1em;
-  }
-
-  header, section {
-    padding: 3% 5%;
+  p {
+    margin-bottom: 1.25em;
   }
 
   header {
-    display: none;
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
   }
 
   code {
-    letter-spacing: 2px;
-  	white-space: code-wrap;
-    display: inline;
-    color: gray;
-  }
-
-  a {
-    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
   }
 
   strong {
     font-weight: 900;
+  }
+
+  ins {
+    text-decoration: none;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -118,6 +118,9 @@
       color: white;
       animation: glitch 3s steps(100) infinite;
     }
+    code {
+      color: #666;
+    }
   }
 
   @media (prefers-color-scheme: light) {
@@ -128,6 +131,9 @@
     a {
       color: blue;
     }
+    code {
+      color: #888;
+    }
   }
 
   /*****/
@@ -137,13 +143,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url('fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+    src: url('fonts/roboto-v30-latin-regular.woff2') format('woff2');
   }
 
   /* roboto-italic - latin */
@@ -151,13 +151,7 @@
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 400;
-    src: url('fonts/roboto-v30-latin-italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('fonts/roboto-v30-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/roboto-v30-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-         url('fonts/roboto-v30-latin-italic.woff') format('woff'), /* Modern Browsers */
-         url('fonts/roboto-v30-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('fonts/roboto-v30-latin-italic.svg#Roboto') format('svg'); /* Legacy iOS */
+    src: url('fonts/roboto-v30-latin-italic.woff2') format('woff2');
   }
 
   /* roboto-900 - latin */
@@ -165,13 +159,15 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
-    src: url('fonts/roboto-v30-latin-900.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('fonts/roboto-v30-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/roboto-v30-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-         url('fonts/roboto-v30-latin-900.woff') format('woff'), /* Modern Browsers */
-         url('fonts/roboto-v30-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('fonts/roboto-v30-latin-900.svg#Roboto') format('svg'); /* Legacy iOS */
+    src: url('fonts/roboto-v30-latin-900.woff2') format('woff2');
+  }
+
+  /* roboto-mono-regular - latin */
+  @font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/roboto-mono-v22-latin-regular.woff2') format('woff2');
   }
 
   @keyframes glitch {
@@ -492,26 +488,26 @@
     <h1>Lennart M&uuml;hlenmeier &mdash; Journalist</h1>
   </header>
 
-  <section>
+  <main>
     <p>Hi, ich bin <strong>Lennart M&uuml;hlenmeier</strong>, Journalist aus Berlin.
     <br>Meine Kernthemen lauten Überwachung, Repression und <span>Hacking</span>.
     <br>Derzeit bin ich als Volontär bei Golem.de angestellt.</p>
     <p>Du kannst mir <strong>gerne eine Mail schreiben</strong> an <a href="mailto:lennart@lnrt.de">lennart@lnrt.de</a>.
     <br>Ich antworte in der Regel innerhalb von drei Tagen.</p>
-    <p>Ich bin via Signal unter <a href="tel:+49 (0) 30 57714760">+49 (0) 30 57714760</a> verschlüsselt zu erreichen.
+    <p>Ich bin via Signal unter <a href="tel:+4903057714760">+49 (0) 30 577 147 60</a> verschlüsselt zu erreichen.
     <br>Bitte nicht anrufen.</p>
     <p>Via Matrix bin ich als <code>@riotbib:nixos.dev</code> erreichbar.
     <br>Oder auf IRC-Netzwerken wie hackint als <code>xkey</code>.</p>
-    <p>Du kannst mir auf <a href="https://twitter.com/lnrthm">Twitter</a> folgen, die DMs sind <strike>offen</strike>geschlossen.
+    <p>Du kannst mir auf <a href="https://twitter.com/lnrthm">Twitter</a> folgen, die DMs sind <del>offen</del> <ins>geschlossen</ins>.
     <br>Ebenso auf <a rel="me" href="https://systemli.social/@lnrthm">Mastodon</a> zu finden.</p>
-    <p>Zudem <a href="https://github.com/riotbib">nutze ich sporadisch Github</a> und trage zu Projekten bei.</p>
-    <p>Meinen PGP-Schl&uuml;ssel findest Du <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/1D03986D2010CF943CB8FBDE581623A87A07ADA8">auf einem zentralen Keyserver</a>.
-    <br>Mein PGP-Fingerprint lautet wie folgt.</p>
+    <p>Zudem nutze ich sporadisch <a href="https://github.com/riotbib">GitHub</a> und trage zu Projekten bei.</p>
+    <p>Meinen PGP-Schl&uuml;ssel findest Du auf einem <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/1D03986D2010CF943CB8FBDE581623A87A07ADA8">zentralen Keyserver</a>.
+    <br>Mein PGP-Fingerprint lautet wie folgt:</p>
     <p><code>1D03 986D 2010 CF94 3CB8  FBDE 5816 23A8 7A07 ADA8</code></p>
     <p>Diese Seite ist auch als <a href="http://xyfijkaqk5n3jp3qvxrtkbotaaqxeljtegwwe6xuzbloeahpvs5dx3yd.onion/">Tor Hidden Service</a> abrufbar.
     <br>Sie wurde zuletzt im November 2022 aktualisiert.
     <br>Mein Web-Server erstellt f&uuml;r diesen Host keine Access-, aber Error-Logs.</p>
-  </section>
+  </main>
 
 </body>
 </html>
